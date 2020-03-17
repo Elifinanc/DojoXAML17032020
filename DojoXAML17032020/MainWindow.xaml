@@ -16,7 +16,9 @@
                 <ComboBoxItem x:Name = "open" HorizontalAlignment="Left" Width="248" >
                     <Button Name="Openfile" Click="btnOpen">Open</Button>
                 </ComboBoxItem>
-                <ComboBoxItem x:Name = "Save" Content="Save" HorizontalAlignment="Left" Width="248"/>
+                <ComboBoxItem x:Name = "Save" HorizontalAlignment="Left" Width="248">
+                    <Button Name="SaveFile" Click="SaveFile_Click">Save file</Button>
+                </ComboBoxItem>
             </ComboBox>
             <ComboBox x:Name = "myCombo2" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250">
                 <ComboBoxItem x:Name = "Edit" Content="Edit" HorizontalAlignment="Left" Width="248" IsSelected="True" IsHitTestVisible="False"/>
@@ -24,7 +26,7 @@
                 <ComboBoxItem x:Name = "Paste" Content="Paste" HorizontalAlignment="Left" Width="248"/>
             </ComboBox>
         </StackPanel>
-        <TextBox x:Name="txtBox" HorizontalAlignment="Left" Height="397" Margin="0,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="792"/>
+        <TextBox x:Name="txtBox" AcceptsReturn="True" HorizontalAlignment="Left" Height="397" Margin="0,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="792"/>
 
     </Grid>
 </Window>

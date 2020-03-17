@@ -39,5 +39,14 @@ namespace DojoXAML17032020
             if (openFileDialog.ShowDialog() == true)
                 txtBox.Text = File.ReadAllText(openFileDialog.FileName);
         }
+
+        private void SaveFile_Click(object sender, RoutedEventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.Filter = "Text file (*.txt)|*.txt|C# file (*.cs)|*.cs";
+            saveFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            if (saveFileDialog.ShowDialog() == true)
+                File.WriteAllText(saveFileDialog.FileName, txtBox.Text);
+        }
     }
 }
