@@ -29,7 +29,18 @@ namespace DojoXAML17032020
 
         private void btnNewfile(object sender, RoutedEventArgs e)
         {
-
+            string message = "Do you want to save your work?";
+            string title = "Save your work";
+            MessageBoxResult result = MessageBox.Show(message, title, MessageBoxButton.YesNo);
+            if (result == MessageBoxResult.Yes)
+            {
+                SaveFile_Click(sender, e);
+                txtBox.Text = "";
+            }
+            else
+            {
+                txtBox.Text = "";
+            }
         }
 
         private void btnOpen(object sender, RoutedEventArgs e)
@@ -48,5 +59,6 @@ namespace DojoXAML17032020
             if (saveFileDialog.ShowDialog() == true)
                 File.WriteAllText(saveFileDialog.FileName, txtBox.Text);
         }
+
     }
 }
