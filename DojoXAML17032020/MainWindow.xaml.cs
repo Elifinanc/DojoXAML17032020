@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.IO;
+using Microsoft.Win32;
 
 namespace DojoXAML17032020
 {
@@ -25,9 +27,17 @@ namespace DojoXAML17032020
             InitializeComponent();
         }
 
-        private void ComboBoxItem_Selected(object sender, RoutedEventArgs e)
+        private void btnNewfile(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void btnOpen(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            if (openFileDialog.ShowDialog() == true)
+                txtBox.Text = File.ReadAllText(openFileDialog.FileName);
         }
     }
 }
