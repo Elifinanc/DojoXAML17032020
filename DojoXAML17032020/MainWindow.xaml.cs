@@ -68,7 +68,9 @@ namespace DojoXAML17032020
 
         private void PasteFromClipboard_Click(object sender, RoutedEventArgs e)
         {
-            txtBox.Text += txtBox.Text + Clipboard.GetText();
+            int debut = txtBox.SelectionStart;
+            txtBox.Text = txtBox.Text.Substring(0, debut) + Clipboard.GetText() + txtBox.Text.Substring(debut, txtBox.Text.Length - debut);
+            
         }
 
     }
