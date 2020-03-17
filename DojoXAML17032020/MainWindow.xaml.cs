@@ -60,5 +60,16 @@ namespace DojoXAML17032020
                 File.WriteAllText(saveFileDialog.FileName, txtBox.Text);
         }
 
+        private void CopyToClipboard_Click(object sender, RoutedEventArgs e)
+        {
+            string textData = txtBox.SelectedText;
+            Clipboard.SetData(DataFormats.Text, (Object)textData);
+        }
+
+        private void PasteFromClipboard_Click(object sender, RoutedEventArgs e)
+        {
+            txtBox.Text += txtBox.Text + Clipboard.GetText();
+        }
+
     }
 }

@@ -8,7 +8,7 @@
         Title="Notepad" Height="450" Width="800">
     <Grid Margin="0,0,0,0">
         <StackPanel x:Name = "myPanel" Margin="0,0,-0.4,310" Height="110" Orientation="Horizontal">
-            <ComboBox x:Name = "myCombo" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250">
+            <ComboBox x:Name = "myCombo" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250" >
                 <ComboBoxItem x:Name = "Filesaction" Content="File" HorizontalAlignment="Left" Width="248" IsSelected="True" IsHitTestVisible="False"/>
                 <ComboBoxItem x:Name = "New" HorizontalAlignment="Left" Width="248" >
                     <Button Name="Newfile" Click="btnNewfile">New file</Button>
@@ -22,8 +22,12 @@
             </ComboBox>
             <ComboBox x:Name = "myCombo2" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250">
                 <ComboBoxItem x:Name = "Edit" Content="Edit" HorizontalAlignment="Left" Width="248" IsSelected="True" IsHitTestVisible="False"/>
-                <ComboBoxItem x:Name = "Copy" Content="Copy" HorizontalAlignment="Left" Width="248"/>
-                <ComboBoxItem x:Name = "Paste" Content="Paste" HorizontalAlignment="Left" Width="248"/>
+                <ComboBoxItem x:Name = "Copy" HorizontalAlignment="Left" Width="248">
+                    <Button Name="CopySelection" Click="CopyToClipboard_Click">Copy</Button>
+                </ComboBoxItem>
+                <ComboBoxItem x:Name = "Paste" HorizontalAlignment="Left" Width="248">
+                    <Button Name="PasteSelection" Click="PasteFromClipboard_Click">Paste</Button>
+                </ComboBoxItem>
             </ComboBox>
         </StackPanel>
         <TextBox x:Name="txtBox" AcceptsReturn="True" HorizontalAlignment="Left" Height="397" Margin="0,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="792"/>
