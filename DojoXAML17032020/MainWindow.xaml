@@ -1,0 +1,24 @@
+﻿<Window x:Class="DojoXAML17032020.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DojoXAML17032020"
+        mc:Ignorable="d"
+        Title="Notepad" Height="450" Width="800">
+    <Grid Margin="0,0,0,0">
+        <StackPanel x:Name = "myPanel" Margin="0,0,-0.4,310" Height="110" Orientation="Horizontal">
+            <ComboBox x:Name = "myCombo" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250">
+                <ComboBoxItem x:Name = "File" Content="File" HorizontalAlignment="Left" Width="248" Selected="ComboBoxItem_Selected" IsSelected="True" IsHitTestVisible="False"/>
+                <ComboBoxItem x:Name = "New" Content="New" HorizontalAlignment="Left" Width="248" Selected="ComboBoxItem_Selected"/>
+                <ComboBoxItem x:Name = "Open" Content="Open" HorizontalAlignment="Left" Width="248" Selected="ComboBoxItem_Selected"/>
+                <ComboBoxItem x:Name = "Save" Content="Save" HorizontalAlignment="Left" Width="248" Selected="ComboBoxItem_Selected"/>
+            </ComboBox>
+            <ComboBox x:Name = "myCombo2" Margin="0,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="250">
+                <ComboBoxItem x:Name = "Edit" Content="Edit" HorizontalAlignment="Left" Width="248" Selected="ComboBoxItem_Selected" IsSelected="True" IsHitTestVisible="False"/>
+                <ComboBoxItem x:Name = "Copy" Content="Copy" HorizontalAlignment="Left" Width="248" Selected="ComboBoxItem_Selected"/>
+                <ComboBoxItem x:Name = "Paste" Content="Paste" HorizontalAlignment="Left" Width="248" Selected="ComboBoxItem_Selected"/>
+            </ComboBox>
+        </StackPanel>
+    </Grid>
+</Window>
